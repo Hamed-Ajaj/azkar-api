@@ -12,6 +12,12 @@ app.get("/api/azkar", (req, res) => {
   res.json(azkar);
 });
 
+app.get("/api/azkar/:category", (req, res) => {
+  const category = req.params.category;
+  const filteredAzkar = azkar.filter((zekr) => zekr.category === category);
+  res.json(filteredAzkar);
+});
+
 // Route to get a random Zekr
 app.get("/api/azkar/random", (req, res) => {
   const randomZekr = azkar[Math.floor(Math.random() * azkar.length)];
