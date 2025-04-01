@@ -8,54 +8,54 @@ app.use(cors()); // Enable CORS for public access
 const PORT = process.env.PORT || 3000;
 
 // Route to get all Azkar
-app.get("/api/azkar", (req, res) => {
+app.get("/", (req, res) => {
   res.json(azkar);
 });
 // Route to get Morning Azkar
 
-app.get("/api/azkar/morning", (req, res) => {
+app.get("/morning", (req, res) => {
   const morningAzkar = azkar["أذكار الصباح"];
   res.json(morningAzkar);
 });
 
 // Route to get Evening Azkar
-app.get("/api/azkar/evening", (req, res) => {
+app.get("/evening", (req, res) => {
   const eveningAzkar = azkar["أذكار المساء"];
   res.json(eveningAzkar);
 });
 
 // Route to get sleep Azkar
-app.get("/api/azkar/sleep", (req, res) => {
+app.get("/sleep", (req, res) => {
   const sleepAzkar = azkar["أذكار النوم"];
   res.json(sleepAzkar);
 });
 
 // Route to get wakeup Azkar
-app.get("/api/azkar/wakeup", (req, res) => {
+app.get("/wakeup", (req, res) => {
   const wakeupAzkar = azkar["أذكار الاستيقاظ"];
   res.json(wakeupAzkar);
 });
 
 // Route to get after salah Azkar
-app.get("/api/azkar/after-salah", (req, res) => {
+app.get("/after-salah", (req, res) => {
   const afterSalahAzkar = azkar["أذكار بعد السلام من الصلاة المفروضة"];
   res.json(afterSalahAzkar);
 });
 
 // Route to get anbiya duaa
-app.get("/api/azkar/anbiya-duaa", (req, res) => {
+app.get("/anbiya-duaa", (req, res) => {
   const anbiyaDuaa = azkar["أدعية الأنبياء"];
   res.json(anbiyaDuaa);
 });
 
 // Route to get quran duaa
-app.get("/api/azkar/quran-duaa", (req, res) => {
+app.get("/quran-duaa", (req, res) => {
   const quranDuaa = azkar["أدعية قرآنية"];
   res.json(quranDuaa);
 });
 
 // Route to get tasabeeh
-app.get("/api/azkar/tasabeeh", (req, res) => {
+app.get("/tasabeeh", (req, res) => {
   const tasabeeh = azkar.تسابيح;
   res.json(tasabeeh);
 });
